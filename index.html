@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Movie App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <div id="myModal" class="modal">
+    <div class="modal-content modal-fullscreen">
+      <span class="close">&times;</span>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" id="movie-info">
+            <img href="" src="" alt="" id="modal-poster">
+          </div>
+          <div class="col-md-8" id="movie-info">
+            <h2><strong>Title:</strong> <span class="Title"></span></h2>
+            <ul class="list-group">
+            <li class="list-group-item"><strong>Genre:</strong> <span class="Genre"></span>
+            </li>
+            <li class="list-group-item"><strong>Released:</strong> <span class="Released"></span></li>
+            <li class="list-group-item"><strong>Rated:</strong> <span class="Rated"></span></li>
+            <li class="list-group-item"><strong>IMDB Rating:</strong> <span class="imdbRating"></span></li>
+            <li class="list-group-item"><strong>Director:</strong> <span class="Director"></span></li>
+            <li class="list-group-item"><strong>Writer:</strong> <span class="Writer"></span></li>
+            <li class="list-group-item"><strong>Actors:</strong> <span class="Actors"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="plot">
+          <h3><strong>Plot:</strong></h3>
+          <span class="Plot"></span>
+          <hr>
+          <a href="" target="_blank" class="btn btn-primary" id="movie-link">View IMDB</a>
+          <a href="index.html" class="btn btn-primary">Go Back To Search</a>
+          <a href="" target="_blank" class="btn btn-primary" id="reviewBtn">View Review</a>
+        </div>
+      </div>
+      <div id="modal-movie-info"></div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <a href="index.html"><img src="https://fontmeme.com/images/universal-kids-font.png" alt width ="255" height="95" alt="netflix-font" border="0"></a>
+      <!-- <div class="logo"><img src="/assets/imgs/logo.png" alt="logo"></div> -->
+    <form>
+      <div class="form-group">
+        <input type="text" id="inputValue" placeholder="Enter Movie Title" required>
+      </div>
+      <p class="error">Field must require input!</p>
+      <button type="submit" id="search">Search Any Movie</button>
+    </form>
+    <div class="ajaxProgress">
+      <div class="loader"></div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <div id="movies-searchable" ><span id="error"></span></div>
+  <span id="searchError"></span>
+  <div id="movies-container" ></div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/apiTransaction.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
